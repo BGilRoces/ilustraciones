@@ -31,7 +31,26 @@ Reglas:
 
 ## Videos
 
-- `index.html`: demo de la vaca (camina, zoom a la caravana, texto "Caravana electrónica").
+Todos los videos comparten `compositions/`. El preview, el check y los snapshots de HyperFrames solo miran `index.html`, así que el repo funciona con un "video en curso" y una carpeta de videos guardados:
+
+- `index.html`: el video en el que se está trabajando.
+- `videos/<nombre>.html`: videos guardados.
+- `renders/`: MP4 generados (no se suben a git).
+
+```bash
+npm run video:list                  # videos guardados
+npm run video:save -- mi-video      # index.html -> videos/mi-video.html
+npm run video:open -- mi-video      # videos/mi-video.html -> index.html (no pisa trabajo sin guardar; --force para pisar)
+npm run video:render -- mi-video    # renderiza a renders/mi-video.mp4 sin tocar index.html
+```
+
+Para un video nuevo: guardá el actual con `video:save`, reemplazá `index.html` por el nuevo y seguí.
+
+Ojo: si editás en Studio, los cambios van a `index.html`; guardalos con `video:save` antes de abrir otro video.
+
+Videos guardados:
+
+- `vaca-demo`: la vaca camina, zoom a la caravana, texto "Caravana electrónica".
 
 ## En otra computadora
 

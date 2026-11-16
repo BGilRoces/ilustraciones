@@ -6,6 +6,10 @@
     "dev": "npx --yes hyperframes@0.9.41 preview",
     "check": "npx --yes hyperframes@0.9.41 check",
     "render": "npx --yes hyperframes@0.9.41 render",
-    "publish": "npx --yes hyperframes@0.9.41 publish"
+    "publish": "npx --yes hyperframes@0.9.41 publish",
+    "video:save": "node scripts/videos.mjs save",
+    "video:open": "node scripts/videos.mjs open",
+    "video:render": "node scripts/videos.mjs render",
+    "video:list": "node scripts/videos.mjs list"
   }
 }
